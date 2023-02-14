@@ -332,7 +332,13 @@ int main(int argc, char **argv)
                 "• Description: %s"
                 "• Author: %s"
                 "• URL: %s",
-                name, desc, author, url
+                name, strlen(desc) == 0 ?
+                    "Not specified\n" :
+                    desc,
+                strlen(author) == 0 ?
+                    "Not specified\n" :
+                    author,
+                url
             );
             break;
 
