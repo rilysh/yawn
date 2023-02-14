@@ -11,6 +11,8 @@ all:
 
 build:
 	$(CC) $(FLAGS) $(LIBS)
+	mv $(PROGRAM) ./test
+	@echo "To run, please see the test directory"
 
 clean:
 	@rm $(PROGRAM)
