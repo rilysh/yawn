@@ -179,7 +179,9 @@ int main(int argc, char **argv)
             sprintf(ftmp, "%s.zl", name);
 
             url[strcspn(url, "\n")] = '\0';
-            yawn_get_file(url, ftmp); /* For test, you can comment out yawn_get_file */
+
+            if (url != "NO")
+                yawn_get_file(url, ftmp); /* For test, you can comment out yawn_get_file */
 
             src = fopen(ftmp, "rb");
             dst = fopen(name, "wb");
