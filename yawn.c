@@ -45,7 +45,7 @@ static void read_and_print(char *file)
     char buf[4096];
     size_t size;
     long pos;
-    int i, k;
+    size_t i, k;
 
     fill_clean(name);
     fill_clean(url);
@@ -227,7 +227,8 @@ int main(int argc, char **argv)
 
             glob_t globbuf;
             globbuf.gl_offs = 0;
-            int i, ret, skip = 0;
+            size_t i;
+            int ret, skip = 0;
             char globby[200];
 
             fill_clean(globby);
